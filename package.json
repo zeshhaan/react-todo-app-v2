@@ -1,7 +1,7 @@
 {
-  "name": "todo-app-v2",
+  "name": "react-todo-app",
   "version": "1.0.0",
-  "description": "second time trying to build todo app functionalities, this time trying to add edit option",
+  "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
