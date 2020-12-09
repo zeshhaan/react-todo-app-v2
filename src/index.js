@@ -1,14 +1,16 @@
+import "./styles.css";
 import ReactDOM from "react-dom";
 import React, { useState } from "react";
-import "./styles.css";
+import { v4 as uuidv4 } from "uuid";
 
 function TodoApp() {
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
+  //initialise the todos List as array
+  const [todosList, setTodosList] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setTodos([...todos, todo]);
+    setTodosList([...todosList, { id: uuidv4(), text: todo }]);
     setTodo("");
   }
 
@@ -23,8 +25,8 @@ function TodoApp() {
         <button type="submit">ADD</button>
       </form>
       <ul>
-        {todos.map((item) => (
-          <li>{item}</li>
+        {todosList.map((item) => (
+          <li key={item.id}>{item.text}</li>
         ))}
       </ul>
     </div>
