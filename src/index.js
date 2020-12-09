@@ -18,6 +18,10 @@ function TodoApp() {
     setTodo(e.target.value);
   }
 
+  function removeItem(item) {
+    setTodosList(todosList.filter((i) => i !== item));
+  }
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -26,7 +30,10 @@ function TodoApp() {
       </form>
       <ul>
         {todosList.map((item) => (
-          <li key={item.id}>{item.text}</li>
+          <div key={item.id}>
+            <li>{item.text}</li>
+            <button onClick={() => removeItem(item)}>DEL</button>
+          </div>
         ))}
       </ul>
     </div>
