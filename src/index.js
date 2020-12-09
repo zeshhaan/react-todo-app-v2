@@ -1,20 +1,23 @@
-import React from "react";
 import ReactDOM from "react-dom";
+import React, { useState } from "react";
 import "./styles.css";
 
 function TodoApp() {
+  const [todo, setTodo] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
+    setTodo("");
   }
 
   function handleChange(e) {
-    console.log(e.target.value);
+    setTodo(e.target.value);
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} />
+        <input value={todo} type="text" onChange={handleChange} />
         <button type="submit">ADD</button>
       </form>
     </div>
