@@ -3,11 +3,19 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 
 function TodoApp() {
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  function handleChange(e) {
+    console.log(e.target.value);
+  }
+
   return (
     <div>
-      <form>
-        <input />
-        <button>ADD</button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" onChange={handleChange} />
+        <button type="submit">ADD</button>
       </form>
     </div>
   );
