@@ -4,9 +4,11 @@ import "./styles.css";
 
 function TodoApp() {
   const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
+    setTodos([...todos, todo]);
     setTodo("");
   }
 
@@ -20,6 +22,11 @@ function TodoApp() {
         <input value={todo} type="text" onChange={handleChange} />
         <button type="submit">ADD</button>
       </form>
+      <ul>
+        {todos.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
