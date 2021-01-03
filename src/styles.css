@@ -75,6 +75,12 @@ ul form {
 ul form input {
   border: none;
   font-size: 16px;
+  line-height: 1.5;
+}
+
+::selection {
+  background-color: #1a202e;
+  color: #fff;
 }
 
 input {
