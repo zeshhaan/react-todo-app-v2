@@ -25,6 +25,7 @@ svg {
   color: #97a6ba;
 }
 
+.strikethrough svg,
 svg:hover {
   color: #364152;
 }
@@ -67,6 +68,7 @@ ul > li {
   padding: 12px 0px;
   margin: 5px 0px;
   border-radius: 5px;
+  align-items: center;
 }
 
 ul > li > label > input {
@@ -83,13 +85,13 @@ ul form {
 
 ul form input {
   border: none;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.5;
   padding: 0px;
 }
 
 ::selection {
-  background-color: #0f6fff;
+  background-color: limegreen;
   color: #fff;
 }
 
@@ -129,7 +131,11 @@ input[placeholder] {
 
 .strikethrough {
   text-decoration: line-through 2px black;
-  background-color: greenyellow;
+  background-color: lightgreen;
+}
+
+.strikethrough svg {
+  color: seagreen;
 }
 
 ul > li > label {
@@ -157,13 +163,13 @@ li input + span:after {
   content: none;
 }
 li input:checked + span:before {
-  border: 2px solid #0f6fff;
+  border: 2px solid limegreen;
 }
 li input:checked + span:after {
   content: "";
 }
 li input:focus + span:before {
-  outline: 5px auto #268bff;
+  outline: 5px auto limegreen;
 }
 li span {
   flex-grow: 2;
@@ -195,8 +201,8 @@ li span:after {
   top: 7px;
   height: 5px;
   width: 9px;
-  border-left: 2px solid #0f6fff;
-  border-bottom: 2px solid #0f6fff;
+  border-left: 2px solid limegreen;
+  border-bottom: 2px solid limegreen;
   transform: rotate(-45deg);
 }
 
