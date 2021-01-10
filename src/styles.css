@@ -91,8 +91,8 @@ ul form input {
 }
 
 ::selection {
-  background-color: limegreen;
-  color: #fff;
+  background-color: rgba(220, 255, 0, 0.95);
+  color: #385075;
 }
 
 input {
@@ -131,11 +131,11 @@ input[placeholder] {
 
 .strikethrough {
   text-decoration: line-through 2px black;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }
 
 .strikethrough svg {
-  color: seagreen;
+  color: #364152;
 }
 
 ul > li > label {
@@ -168,9 +168,9 @@ li input:checked + span:before {
 li input:checked + span:after {
   content: "";
 }
-li input:focus + span:before {
+/* li input:focus + span:before {
   outline: 5px auto limegreen;
-}
+} */
 li span {
   flex-grow: 2;
   color: #385075;
